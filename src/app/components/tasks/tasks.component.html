@@ -1,8 +1,9 @@
 <!-- because we import mock data and interface in task.component.ts, 
-    we should be able to loop on the tasks with *ngFor let task of tasks, kinda equivalent to map or forEach method
+    we should be able to loop on the tasks with *ngFor let task of tasks, 
+    kinda equivalent to map or forEach method -->
 
- <div *ngFor="let task of tasks">
-  <h3>{{ task.text }}</h3>
-  <p>{{ task.day }}</p>
-</div> -->
-<app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+></app-task-item>

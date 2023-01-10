@@ -16,4 +16,10 @@ export class TasksComponent implements OnInit {
     // this.tasks = this.taskService.getTasks(); // this is not an observable
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks)); // this is an observable
   }
+
+  deleteTask(task: Task) {
+    this.taskService.deleteTask(task).subscribe(
+      () => (this.tasks = this.tasks.filter((t) => t.id !== task.id)) //for earch task we want where for t.id is not equal to task id we deleted
+    );
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task'; // interface
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,12 +9,13 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task: Task; // we want to pass the mock data as props of our Task component
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
   constructor() {}
 
   ngOnInit(): void {}
 
   onDelete(task) {
-    console.log('delete', task);
+    this.onDeleteTask.emit(task);
   }
 }
