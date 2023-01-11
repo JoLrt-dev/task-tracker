@@ -10,6 +10,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class TaskItemComponent implements OnInit {
   @Input() task: Task; // we want to pass the mock data as props of our Task component
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
+
   faTimes = faTimes;
   constructor() {}
 
@@ -17,5 +19,9 @@ export class TaskItemComponent implements OnInit {
 
   onDelete(task) {
     this.onDeleteTask.emit(task);
+  }
+  // Each emit goes to the parent component. In this case, task.component.ts
+  onToggle(task) {
+    this.onToggleReminder.emit(task);
   }
 }

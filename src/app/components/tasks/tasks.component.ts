@@ -22,4 +22,8 @@ export class TasksComponent implements OnInit {
       () => (this.tasks = this.tasks.filter((t) => t.id !== task.id)) //for earch task we want where for t.id is not equal to task id we deleted
     );
   }
+  toggleReminder(task: Task) {
+    task.reminder = !task.reminder;
+    console.log(task.reminder);
+  }
 }
