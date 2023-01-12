@@ -1,4 +1,5 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+  <!-- *ngIf === if statement that will check the value of showAddTask. If false, display. If true, hide -->
   <div class="form-control">
     <label for="task">Task</label>
     <input
