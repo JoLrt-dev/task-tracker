@@ -1,0 +1,33 @@
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+  <!-- *ngIf === if statement that will check the value of showAddTask. If false, display. If true, hide -->
+  <div class="form-control">
+    <label for="task">Task</label>
+    <input
+      type="text"
+      name="task"
+      [(ngModel)]="text"
+      id="task"
+      placeholder="Add Task..."
+    />
+  </div>
+  <div class="form-control">
+    <label for="task">Day & Time</label>
+    <input
+      type="text"
+      name="day"
+      [(ngModel)]="day"
+      id="day"
+      placeholder="Define Day and Time..."
+    />
+  </div>
+  <div class="form-control form-control-check">
+    <label for="reminder">Set Reminder</label>
+    <input
+      type="checkbox"
+      name="reminder"
+      [(ngModel)]="reminder"
+      id="reminder"
+    />
+  </div>
+  <input type="submit" value="Save Task" class="btn btn-block" />
+</form>

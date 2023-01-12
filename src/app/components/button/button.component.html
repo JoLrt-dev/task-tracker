@@ -1,0 +1,16 @@
+<!-- [ngStyle] Is an attribute directive that updates styles for the containing HTML element. 
+    Sets one or more style properties, specified as colon-separated key-value pairs
+    (e.g. [ngStyle]="{'width': 100px; 'height': 100px}").
+    The ngStyle directive can be used to set the style of an element dynamically.
+
+    (click) Is an event binding that listens for the button's click event and calls the onClick() method in the component class.
+    The onClick() method is defined in the component class and is called when the button is clicked.
+    Do not forget to add the onClick() method to the component class.
+-->
+<button
+  [ngStyle]="{ 'background-color': color }"
+  class="btn"
+  (click)="onClick()"
+>
+  {{ text }}
+</button>

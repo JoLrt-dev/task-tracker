@@ -1,2 +1,7 @@
-<!-- Call the value of AppComponent.title in 'app.component.ts' and convert it to uppercase -->
-<h1>{{ title.toUpperCase() }}</h1>
+<div class="container">
+  <app-header></app-header>
+  <!-- <app-tasks></app-tasks> -->
+  <router-outlet></router-outlet>
+  <!-- Same as above, because Tasks components is our home page -->
+  <app-footer></app-footer>
+</div>
