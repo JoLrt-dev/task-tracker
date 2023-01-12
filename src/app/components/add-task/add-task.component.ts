@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Task } from 'src/app/Task';
-import { UiService } from 'src/app/services/ui.service';
+import { Task } from 'src/app/Task'; // import the Task interface
+import { UiService } from 'src/app/services/ui.service'; // need to display/add the Add button and component
 import { Subscription } from 'rxjs';
 
 @Component({

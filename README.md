@@ -1,6 +1,6 @@
 # TaskTracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+Credits to TraversyMedia, following his 'Angular Crash Course' on Youtube : https://www.youtube.com/watch?v=3dHNOWTI7H8
 
 ## Development server
 
@@ -8,7 +8,19 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component <component-name>` to generate a new component.
+
+Run `ng generate service <service-name>` to generate a new service.
+
+## Mock back-end server
+
+Run `npm i json-server` to install the package that will allo you to create a full fake REST API.
+Create a `db.json` file on the root folder of your app, fill in with any data you want to mock,
+and then add ` "server": "json-server --watch db.json --port 5000"` to your package script to run your json-server on port 5000 with `npm run server`.
+
+This is kind of a better way to mock data than doing it with the `mock-data.ts file` .
+
+Check https://www.npmjs.com/package/json-server for documentation.
 
 ## Build
 
