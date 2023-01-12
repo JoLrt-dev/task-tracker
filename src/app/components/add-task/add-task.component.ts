@@ -17,7 +17,7 @@ export class AddTaskComponent implements OnInit {
   showAddTask: boolean;
 
   constructor(private uiService: UiService) {
-    //kinda same that we did in the header component
+    // kinda same that we did in the header component
     this.subscription = this.uiService.onToggle().subscribe((value) => {
       this.showAddTask = value;
     });

@@ -14,6 +14,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // This is were you will declare all your routes, and then import them into the imports array
 //  One path is connected with one component
@@ -65,6 +66,7 @@ const AppRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(AppRoutes, { enableTracing: true }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
