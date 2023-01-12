@@ -1,5 +1,7 @@
 <form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
   <!-- *ngIf === if statement that will check the value of showAddTask. If false, display. If true, hide -->
+  <!-- ngSubmit is an EventEmitter -->
+  <!-- ngModel refers to the Task Interface file (src/app.Task.ts) and it used to check if everything match through add-task-component.ts -->
   <div class="form-control">
     <label for="task">Task</label>
     <input
